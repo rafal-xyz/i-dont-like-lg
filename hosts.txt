@@ -1,0 +1,128 @@
+# i-dont-like-lg - LG Smart TV (webOS) telemetry / ACR / ad blocklist
+# One file. Format: 0.0.0.0 <domain>. Works as a Pi-hole / AdGuard Home adlist or in /etc/hosts.
+# Add the raw URL of this file as an adlist:
+#   https://raw.githubusercontent.com/rafal-xyz/i-dont-like-lg/main/hosts.txt
+#
+# Verified against LG webOS 2020 + 2023 models, then merged with public LG lists.
+# Region-proof: regional prefixes (us/eu/de/pl/...) are enumerated for the ad hosts.
+#
+# LEFT WORKING ON PURPOSE (do NOT add these): eic.netflixvoice.lgtvcommon.com (Netflix
+# voice search); Netflix/Prime/YouTube streaming; the base lgappstv.com / lgthinq.com
+# (LG app store + smart-home still function; only their ad/telemetry hosts are blocked).
+#
+# CAVEAT: some webOS firmware uses hardcoded DNS-over-HTTPS and can bypass DNS blocking.
+# Also block outbound DoH on your router and do not set a manual public DNS on the TV.
+
+##### LG Smart Ad platform #####
+0.0.0.0 lgsmartad.com
+0.0.0.0 info.lgsmartad.com
+0.0.0.0 ad.lgsmartad.com
+0.0.0.0 us.info.lgsmartad.com
+0.0.0.0 us.ad.lgsmartad.com
+0.0.0.0 eu.info.lgsmartad.com
+0.0.0.0 eu.ad.lgsmartad.com
+0.0.0.0 de.info.lgsmartad.com
+0.0.0.0 de.ad.lgsmartad.com
+0.0.0.0 pl.info.lgsmartad.com
+0.0.0.0 pl.ad.lgsmartad.com
+0.0.0.0 gb.info.lgsmartad.com
+0.0.0.0 kr.info.lgsmartad.com
+0.0.0.0 jp.info.lgsmartad.com
+0.0.0.0 lgsmartad.lgtvsdp.com
+
+##### LG Smart Delivery Platform + ad-exchange (rdx2) #####
+0.0.0.0 lgtvsdp.com
+0.0.0.0 config.lgtvsdp.com
+0.0.0.0 tracking.lgtvsdp.com
+0.0.0.0 smartshare.lgtvsdp.com
+0.0.0.0 rdx2.lgtvsdp.com
+0.0.0.0 us.rdx2.lgtvsdp.com
+0.0.0.0 pl.rdx2.lgtvsdp.com
+0.0.0.0 pl.lgtvsdp.com
+0.0.0.0 fr.security.lgtvsdp.com
+0.0.0.0 nextlgsdp.com
+0.0.0.0 rdx2.nextlgsdp.com
+0.0.0.0 pl.rdx2.nextlgsdp.com
+
+##### LG IoT push / telemetry #####
+0.0.0.0 lgtviot.com
+0.0.0.0 eic.lgtviot.com
+0.0.0.0 eic.commonpush.lgtviot.com
+0.0.0.0 eic.api.lgtviot.com
+0.0.0.0 eic-ocp.lgtviot.com
+0.0.0.0 eic.sports.lgtviot.com
+
+##### LG ThinQ telemetry (base lgthinq.com left working for smart-home control) #####
+0.0.0.0 eic-connect-client.lgthinq.com
+0.0.0.0 prd-api.lgthinq.com
+
+##### Alphonso ACR (automatic content recognition) #####
+0.0.0.0 alphonso.tv
+0.0.0.0 prov-lg.alphonso.tv
+0.0.0.0 eu-acr3.alphonso.tv
+
+##### LG WISE content-recognition / ad config #####
+0.0.0.0 tv.wiselg.com
+0.0.0.0 eic.tv.wiselg.com
+0.0.0.0 pl.tv.wiselg.com
+0.0.0.0 ngfts.tv.wiselg.com
+0.0.0.0 eic-gfts.tv.wiselg.com
+
+##### LG platform + account/recommendation telemetry #####
+0.0.0.0 lgsmartplatform.com
+0.0.0.0 pl.emp.lgsmartplatform.com
+0.0.0.0 us.emp.lgsmartplatform.com
+0.0.0.0 lgeapi.com
+0.0.0.0 pl.lgeapi.com
+0.0.0.0 us.lgeapi.com
+
+##### LG Content Store ads/billing (base lgappstv.com left working for the app store) #####
+0.0.0.0 ad.lgappstv.com
+0.0.0.0 ibs.lgappstv.com
+0.0.0.0 ibis.lgappstv.com
+0.0.0.0 us.ibs.lgappstv.com
+0.0.0.0 eu.ibs.lgappstv.com
+0.0.0.0 de.ibs.lgappstv.com
+
+##### LG Customer Data Platform / ads / home-screen promos (lgtvcommon.com) #####
+# netflixvoice.lgtvcommon.com is intentionally NOT here (keeps Netflix voice search)
+0.0.0.0 aic.api.adts.lgtvcommon.com
+0.0.0.0 aic.cdpbeacon.lgtvcommon.com
+0.0.0.0 aic.cdplauncher.lgtvcommon.com
+0.0.0.0 aic.cdpsvc.lgtvcommon.com
+0.0.0.0 eic.cdpbeacon.lgtvcommon.com
+0.0.0.0 eic.cdpbeacon2.lgtvcommon.com
+0.0.0.0 eic.cdpsvc.lgtvcommon.com
+0.0.0.0 eic.cdplauncher.lgtvcommon.com
+0.0.0.0 eic.rdl.lgtvcommon.com
+0.0.0.0 eic.ads.lgtvcommon.com
+0.0.0.0 eic.nudge.lgtvcommon.com
+0.0.0.0 eic.recommend.lgtvcommon.com
+0.0.0.0 eic.wiseconfig.lgtvcommon.com
+0.0.0.0 eic.homeprv.lgtvcommon.com
+0.0.0.0 eic.lgchhomeapp.lgtvcommon.com
+
+##### LG video-ad / ACR partners #####
+0.0.0.0 yumenetworks.com
+0.0.0.0 smartclip.net
+0.0.0.0 smartclip.com
+0.0.0.0 lgad.cjpowercast.com.edgesuite.net
+
+##### LG firmware / OTA updates (blocking these FREEZES webOS updates - remove if unwanted) #####
+0.0.0.0 ngfts.lge.com
+0.0.0.0 aic-ngfts.lge.com
+0.0.0.0 eic-ngfts.lge.com
+0.0.0.0 gfts.lge.com
+0.0.0.0 snu.lge.com
+0.0.0.0 snc.lge.com
+0.0.0.0 su-ssl.lge.com
+0.0.0.0 lgtvonline.lge.com
+0.0.0.0 lge.com.edgesuite.net
+
+##### Third-party ad hosts LG apps pull (also covered by any general adlist) #####
+0.0.0.0 googleads.g.doubleclick.net
+0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 static.doubleclick.net
+0.0.0.0 pagead2.googlesyndication.com
+0.0.0.0 video-ad-stats.l.google.com
