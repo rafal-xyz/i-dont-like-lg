@@ -10,7 +10,7 @@
 # voice search); Netflix/Prime/YouTube streaming; the base lgappstv.com / lgthinq.com
 # (LG app store + smart-home still function; only their ad/telemetry hosts are blocked).
 #
-# CAVEAT: some webOS firmware uses hardcoded DNS-over-HTTPS and can bypass DNS blocking.
+# WARNING: some webOS firmware uses hardcoded DNS-over-HTTPS and can bypass DNS blocking.
 # Also block outbound DoH on your router and do not set a manual public DNS on the TV.
 
 ##### LG Smart Ad platform #####

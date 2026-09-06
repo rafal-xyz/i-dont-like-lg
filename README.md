@@ -43,7 +43,7 @@ smart-home). Only their ad/telemetry subdomains are blocked.
   want updates.
 - Blocking `lgeapi.com` may affect LG account sign-in on some setups; allow it if
   needed.
-- **DoH caveat:** some webOS firmware uses hardcoded DNS-over-HTTPS and can bypass
+- **DoH warning:** some webOS firmware uses hardcoded DNS-over-HTTPS and can bypass
   DNS blocking. Also block outbound DoH on your router and do not set a manual
   public DNS on the TV.
 
